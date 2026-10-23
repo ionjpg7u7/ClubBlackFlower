@@ -1,0 +1,24 @@
+---
+const items = [
+  { q: '¿Es exclusivo para parejas?', a: 'Sí. El acceso es solo para parejas. No se admiten personas solas.', icon: '<circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/>' },
+  { q: 'Privacidad y discreción', a: 'No compartimos datos de socios ni invitados. Pedimos a todos los asistentes el mismo nivel de reserva sobre lo que vean y a quién conozcan.', icon: '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/><path d="M4 20 20 4"/>' },
+  { q: 'Prohibido el uso de móviles', a: 'Los teléfonos se guardan en la entrada. No se permiten fotos ni vídeos dentro del club, bajo ninguna circunstancia.', icon: '<rect x="7" y="2" width="10" height="20" rx="2"/><path d="M3 3l18 18"/>' },
+  { q: 'Mayores de 18 años', a: 'Solo mayores de edad. Se solicita documento de identidad en la entrada y no hay excepciones.', icon: '<circle cx="12" cy="12" r="10"/><path d="M7 15V9l-1.5 1M10.5 9.5c1-1 3-.5 3 1s-3 2.5-3 4.5h3.5"/>' },
+];
+---
+<section class="faq" id="normas">
+  <div class="wrap">
+    <h2 class="reveal">Normas del club</h2>
+    <div class="acc reveal">
+      {items.map((it, i) => (
+        <div class="acc-item">
+          <button class="acc-btn" id={`b${i}`} aria-expanded="false" aria-controls={`p${i}`}>
+            <svg viewBox="0 0 24 24" aria-hidden="true" set:html={it.icon}></svg>
+            <span class="t">{it.q}</span><span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="acc-panel" id={`p${i}`} role="region" aria-labelledby={`b${i}`}><div><p>{it.a}</p></div></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

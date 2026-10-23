@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AgeGate from '../components/AgeGate.astro';
+import Hero from '../components/Hero.astro';
+import Marquee from '../components/Marquee.astro';
+import Events from '../components/Events.astro';
+import Gallery from '../components/Gallery.astro';
+import Faq from '../components/Faq.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout>
+  <AgeGate />
+  <header class="nav">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#eventos">Eventos</a></li>
+      <li><a href="#campanas">Campañas</a></li>
+      <li><a href="#normas">Normas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </header>
+  <main>
+    <Hero />
+    <Marquee />
+    <section class="about" id="nosotros">
+      <div class="wrap">
+        <h2 class="reveal">Quiénes somos</h2>
+        <p class="reveal">Black Flower es un club privado pensado para parejas adultas que valoran la discreción por encima de todo. Aquí cada persona decide hasta dónde llegar, y ese límite se respeta siempre.</p>
+        <p class="reveal">Cuidamos cada detalle para que tu visita sea tranquila: acceso reservado, ambiente cuidado y un equipo atento que protege tu identidad.</p>
+        <div class="pillars">
+          <div class="pillar reveal"><h3>Discreción</h3><p>Lo que ocurre en el club se queda en el club.</p></div>
+          <div class="pillar reveal"><h3>Respeto</h3><p>Un no es un no. Sin presiones, sin excepciones.</p></div>
+          <div class="pillar reveal"><h3>Privacidad</h3><p>Tus datos no se comparten ni se publican.</p></div>
+        </div>
+      </div>
+    </section>
+    <Events />
+    <Gallery />
+    <Faq />
+    <Contact />
+  </main>
+  <Footer />
+</Layout>

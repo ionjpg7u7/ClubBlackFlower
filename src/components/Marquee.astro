@@ -1,0 +1,7 @@
+---
+const words = ['Discreción', 'Respeto', 'Solo parejas', 'Privacidad', '+18'];
+const items = [...words, ...words, ...words, ...words];
+---
+<div class="marquee" aria-hidden="true">
+  <div class="track">{items.map((w) => <span>{w}</span>)}</div>
+</div>

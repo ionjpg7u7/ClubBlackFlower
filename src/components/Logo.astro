@@ -1,0 +1,4 @@
+---
+const { class: cls = "logo", label = "" } = Astro.props;
+---
+<img class={cls} src="/favicon.svg?v=3" alt={label} aria-hidden={label ? undefined : "true"} />

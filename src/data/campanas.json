@@ -1,0 +1,8 @@
+[
+  { "titulo": "Noche de máscaras", "etiqueta": "Flyer", "imagen": "", "tamano": "grande" },
+  { "titulo": "Aftermovie", "etiqueta": "Video", "imagen": "", "video": "", "tamano": "alto" },
+  { "titulo": "Gala de fin de año", "etiqueta": "Evento", "imagen": "", "tamano": "" },
+  { "titulo": "Campaña de verano", "etiqueta": "Redes", "imagen": "", "tamano": "ancho" },
+  { "titulo": "Aniversario", "etiqueta": "Flyer", "imagen": "", "tamano": "" },
+  { "titulo": "Promo parejas", "etiqueta": "Story", "imagen": "", "tamano": "" }
+]

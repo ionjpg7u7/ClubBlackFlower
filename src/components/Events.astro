@@ -1,0 +1,27 @@
+---
+import events from '../data/events.json';
+const mes = new Intl.DateTimeFormat('es', { month: 'short', timeZone: 'UTC' });
+const dia = new Intl.DateTimeFormat('es', { weekday: 'long', timeZone: 'UTC' });
+---
+<section id="eventos">
+  <div class="wrap">
+    <h2 class="reveal">Próximos eventos</h2>
+    <div class="events">
+      {events.map((e) => {
+        const d = new Date(e.fecha);
+        return (
+          <article class="card glass reveal">
+            <time class="date" datetime={e.fecha}>
+              <b>{d.getUTCDate()}</b><span>{mes.format(d)}</span>
+            </time>
+            <div>
+              <small>{dia.format(d)}</small>
+              <h3>{e.titulo}</h3>
+              <p>{e.descripcion}</p>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+---
+import Logo from './Logo.astro';
+---
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+  <div class="box">
+    <Logo class="logo gate-logo" />
+    <h2 id="gate-title">Este sitio contiene contenido para adultos</h2>
+    <p id="gate-text">¿Eres mayor de 18 años?</p>
+    <div class="row" id="gate-btns">
+      <button class="btn solid" id="age-yes" type="button">Sí, soy mayor</button>
+      <button class="btn" id="age-no" type="button">No</button>
+    </div>
+  </div>
+</div>

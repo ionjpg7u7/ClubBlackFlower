@@ -1,0 +1,27 @@
+---
+// Sube los archivos a public/campanas/ y regístralos en src/data/campanas.json
+import ads from '../data/campanas.json';
+---
+<section class="gallery-sec" id="campanas">
+  <div class="wrap">
+    <h2 class="reveal">Nuestras campañas</h2>
+    <ul class="bento">
+      {ads.map((a) => (
+        <li class={`b ${a.tamano || ''} reveal`}>
+          <button class="tile glass" type="button" data-src={a.imagen} data-title={a.titulo} aria-label={`Ver: ${a.titulo}`}>
+            {a.video
+              ? <video src={a.video} autoplay muted loop playsinline preload="metadata"></video>
+              : a.imagen
+                ? <img src={a.imagen} alt={a.titulo} loading="lazy" />
+                : <span class="ph" aria-hidden="true"></span>}
+            <span class="cap"><em>{a.etiqueta}</em>{a.titulo}</span>
+          </button>
+        </li>
+      ))}
+    </ul>
+  </div>
+  <dialog id="lightbox">
+    <form method="dialog"><button class="close" aria-label="Cerrar">×</button></form>
+    <img alt="" />
+  </dialog>
+</section>

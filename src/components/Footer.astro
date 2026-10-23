@@ -1,0 +1,16 @@
+---
+import Logo from './Logo.astro';
+const year = new Date().getFullYear();
+---
+<footer>
+  <div class="wrap">
+    <Logo class="logo foot-logo" label="Black Flower" />
+    <nav aria-label="Legal">
+      <a href="/aviso-legal">Aviso legal</a>
+      <a href="/privacidad">Política de privacidad</a>
+    </nav>
+    <div class="age-badge" aria-hidden="true">+18</div>
+    <small>Contenido exclusivo para mayores de 18 años. Si no cumples este requisito, abandona este sitio.</small>
+    <small>© {year} Black Flower. Todos los derechos reservados.</small>
+  </div>
+</footer>
